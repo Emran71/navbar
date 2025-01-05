@@ -10,7 +10,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: auto;
 }
 .navbar{
     display: flex;
@@ -38,6 +38,11 @@ body{
     color: #000;
     font-size: 1rem;
     font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.navbar ul li a:hover{
+    color: #fafafa;
+    background-color: #04448d;
 }
 .container{
     display: flex;
@@ -181,7 +186,7 @@ body{
     cursor: pointer;
 }
 .btn1 {
-    width: 9%;
+    width: 130px;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -226,4 +231,19 @@ body{
     margin-left: 65px;
     font-size: 16px;
     color: #666;;
+}
+@media screen and (max-width: 768px){
+    .navbar{
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .navbar ul{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+   .container{
+         flex-direction: column;
+         gap: 10px;
+   }
+    
 }
